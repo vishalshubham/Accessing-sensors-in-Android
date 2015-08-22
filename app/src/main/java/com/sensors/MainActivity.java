@@ -23,6 +23,8 @@ public class MainActivity extends Activity implements SensorEventListener{
         setContentView(R.layout.activity_main);
         sensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);//sensor = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
+
+// Similarly many other sensors can be used 
         sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_NORMAL);
         sensorTextView = (TextView)findViewById(R.id.sensor_info);
     }
